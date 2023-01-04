@@ -6,7 +6,7 @@
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 19:22:56 by fleduc            #+#    #+#             */
-/*   Updated: 2022/12/28 13:36:57 by fleduc           ###   ########.fr       */
+/*   Updated: 2023/01/04 12:26:49 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*run_philosophers(void *arg)
 	t_philo	*philo;
 
 	philo = (t_philo *)arg;
-	if (philo->nbr % 2)
+	if (philo->nbr % 2 == 0)
 		usleep_check(philo, philo->all->time_eat);
 	while ((check_death(philo->all) == false))
 	{
