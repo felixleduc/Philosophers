@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sleep.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fleduc <fleduc@student.42quebec.com>       +#+  +:+       +#+        */
+/*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 19:23:01 by fleduc            #+#    #+#             */
-/*   Updated: 2022/12/16 13:25:21 by fleduc           ###   ########.fr       */
+/*   Updated: 2023/01/04 12:10:47 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	usleep_check(t_philo *philo, t_ms time)
 	{
 		if (check_death(philo->all))
 			break ;
-		usleep (200);
+		usleep (1000);
 	}
 }
 
@@ -31,5 +31,5 @@ void	usleep_eat(t_philo *philo)
 
 	stop = philo->start_current_action + philo->all->time_eat;
 	while ((gettime() < stop))
-		usleep (200);
+		usleep (1000);
 }
